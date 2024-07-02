@@ -38,13 +38,13 @@ let tetromino = {
     row: 0,
 }
 
-
+// COMMON
 function convertPositionToIndex(row, col){
     return row * PLAYFILED_COLUMNS + col
 
 }
 
-
+// GENERATION
 function generateTetromino(){
     const nameTetro = TETROMINO_NAMES[0];
     const matrix = TETROMINOES['O'];
@@ -75,6 +75,34 @@ function generatePlayfield(){
     console.table(playfield)                        
 }
 
+// KEYBOARD
+
+document.addEventListener('keydown', onKeyDown)
+
+function onKeyDown(event){
+
+    if(event.key == 'ArrowLeft'){
+        tetromino.column -= 1;
+    }
+
+    
+    if(event.key == 'ArrowRight'){
+        tetromino.column += 1;
+    }
+
+    if(event.key == 'ArrowDown'){
+        tetromino.row += 1;
+    }
+    draw()
+}
+
+function draw(){
+    drowPlayfield();
+    cells.forEach(el => el.removeAttribute('class') );
+    drawTetromino();
+}
+
+// DRAW
 function drawTetromino(){
     const name = tetromino.name;
     const tetrominoMatrixSize = tetromino.matrix.length;
@@ -108,5 +136,4 @@ generatePlayfield();
 let cells = document.querySelectorAll('.tetris div');
 generateTetromino();
 
-drowPlayfield();
-drawTetromino();
+draw()
