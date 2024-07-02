@@ -17,12 +17,27 @@ body{
 
 }
 
+/* .tetris div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background: rgba(211, 211, 211, 0.4);
+    box-shadow: 
+        inset 2px 2px 2px rgb(221, 54, 54),
+        inset -2px -2px 2px rgb(62, 0, 139)
+    ;
+} */
+
 .tetris div{
     height: min(4vh, 7vw);
     width: min(4vh, 7vw);
     background: rgba(211, 211, 211, 0.4);
     box-shadow: 
-        inset 2px 2px 2px black
+    /* inset 2px 2px 2px black,
+    inset -2px -2px -2px wheat */
+        /* /* inset 2px 2px 2px rgb(221, 54, 54), */
+        /* inset -2px -2px -2px rgb(105, 245, 11),  */
+        inset 2px 2px 2px rgb(221, 54, 54),
+        inset -2px -2px 2px rgb(62, 0, 139) 
         /* inset -2px -2px -2px rebeccapurple */
     ;
 
