@@ -3,7 +3,7 @@
 }
 
 body{
-    background: linear-gradient(45deg, yellow, orange, red);
+    background: linear-gradient(45deg, #222831, #EEEEEE);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@ body{
 }
 
 .tetris {
-    border: 5px solid rgb(42, 178, 202);
+    border: 5px solid #00ADB5;
     display: grid;
     grid-template-columns: repeat(10, auto);
 
@@ -27,6 +27,18 @@ body{
     ;
 } */
 
+.score{
+    font-size: 40px;
+    font-family: Arial,
+    sans-serif;
+    margin-left: 10px;
+
+    border: 10px solid #393E46;
+    padding: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
 .tetris div{
     height: min(4vh, 7vw);
     width: min(4vh, 7vw);
@@ -36,38 +48,61 @@ body{
     inset -2px -2px -2px wheat */
         /* /* inset 2px 2px 2px rgb(221, 54, 54), */
         /* inset -2px -2px -2px rgb(105, 245, 11),  */
-        inset 2px 2px 2px rgb(221, 54, 54),
-        inset -2px -2px 2px rgb(62, 0, 139) 
+        inset 2px 2px 2px #00ADB5,
+        inset -2px -2px 2px #393E46
         /* inset -2px -2px -2px rebeccapurple */
     ;
 
 }
 
 .tetris .O {
-    background-color: rgb(105, 245, 11);
+    background-color: #F9ED69;
 }
 
 .tetris .L {
-    background-color: rgb(26, 182, 243);
+    background-color: #F08A5D;
 }
 
 .tetris .J {
-    background-color: rgb(166, 177, 190);
+    background-color: #B83B5E;
 }
 
 
 .tetris .T {
-    background-color: rgb(103, 105, 238);
+    background-color: #6A2C70;
 }
 
 .tetris .I {
-    background-color: yellow
+    background-color: #08D9D6
 }
 
 .tetris .S {
-    background-color: aqua;
+    background-color: #FF2E63;
 }
 
 .tetris .Z {
-    background-color: rgb(11, 7, 243);
+    background-color: #EAEAEA;
+}
+
+.overlay{
+    background: rgba(62, 0, 139, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-restart{
+    cursor: pointer;
+    width: 400px;
+    height: 200px;
+    font-size: 80px;
+    border-radius: 20px;
+    border: 15px solid #57006b;
+    background: #c60bf0;
+    color: #fff;
 }
