@@ -8,7 +8,7 @@ let timedId;
 let isGameOver = false;
 let overlay = document.querySelector('.overlay');
 let scoreElement = document.querySelector('.score');
-let btnRestart = document.querySelector('.btn-restart');
+let btnRestart = document.querySelector('.btn-restart,.btn-restart-permanent');
 let score = 0;
 
 

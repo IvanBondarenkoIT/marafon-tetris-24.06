@@ -106,3 +106,14 @@ body{
     background: #c60bf0;
     color: #fff;
 }
+
+.btn-restart-permanent{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 15px solid #57006b;
+    background: #c60bf0;
+    color: #fff;
+}
